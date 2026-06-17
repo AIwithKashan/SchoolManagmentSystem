@@ -1,0 +1,20 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/early-warning",
+      "schedule": "0 7 * * 1-5"
+    },
+    {
+      "path": "/api/cron/fee-reminders", 
+      "schedule": "0 9 1 * *"
+    }
+  ],
+  "functions": {
+    "app/api/ai/**": {
+      "maxDuration": 60
+    },
+    "app/api/**": {
+      "maxDuration": 30
+    }
+  }
+}
